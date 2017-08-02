@@ -8,7 +8,7 @@ url: http://www.kxjun.top
 github: https://github.com/frankxjkuang
 
 # baseurl修改为项目名，如果项目是'***.github.io'，则设置为空''
-baseurl: ''
+baseurl: ""
 description: This too shall pass!
 meta_description: Blog
 motto: Do what you think is right.
