@@ -1,15 +1,16 @@
 # Site settings
-name: Less Or More
-email: luoyan35714@126.com
-author: Freud Kang
-url: http://www.hifreud.com
-resume_site: http://www.hifreud.com/Resume.io/
-github: https://github.com/luoyan35714/
+name: Frank's Blog
+email: frankxjkuang@gmail.com
+author: Frank·J
+url: http://www.kxjun.top
+# 个人简历
+# resume_site: http://www.hifreud.com/Resume.io/
+github: https://github.com/frankxjkuang/
 baseurl: ""
-description: Actually, less is more!
-meta_description: 康志华;个人博客;学而不思则罔;思而不学则殆;生命不止;折腾不休
-motto: It's our wits that make us men.
-banner: 学而不思则罔，思而不学则殆。
+description: This too shall pass!
+meta_description: 旷祥军;个人博客;学习;web;
+motto: 想要得到某样东西的最好方法,就是让自己配得上它。
+banner: Do what you want to do and start now.
 
 #permalink: /:categories/:year/:month/:day/:title/
 permalink: /:year/:month/:day/:title/
@@ -23,5 +24,6 @@ highlighter: Pygments
 # Build settings
 markdown: kramdown
 
-baidu_analysis: 94be4b0f9fc5d94cc0d0415ea6761ae9
+baidu_analysis: e2e60863afcb2e6d5e0598e66a924eaf
+# 94be4b0f9fc5d94cc0d0415ea6761ae9
 
