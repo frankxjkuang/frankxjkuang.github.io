@@ -1,31 +1,27 @@
 # Site settings
-name: Frank's Blog
-email: frankxjkuang@gmail.com
-author: Frank·J
-url: http://www.kxjun.top
-# 个人简历网站
-# resume_site: http://www.hifreud.com/Resume.io/
-github: https://github.com/frankxjkuang
+name: Less Or More
+email: luoyan35714@126.com
+author: Freud Kang
+url: http://www.hifreud.com
+resume_site: http://www.hifreud.com/Resume.io/
+github: https://github.com/luoyan35714/
+baseurl: "/LessOrMore"
+description: Actually, less is more!
+meta_description: 康志华;个人博客;学而不思则罔;思而不学则殆;生命不止;折腾不休
+motto: It's our wits that make us men.
+banner: 学而不思则罔，思而不学则殆。
 
-# baseurl修改为项目名，如果项目是'***.github.io'，则设置为空''
-baseurl: ""
-description: This too shall pass!
-meta_description: Blog
-motto: Do what you think is right.
-banner: 得到一件东西的最好方式:让自己配得上它。
-
-# permalink: /:categories/:year/:month/:day/:title/
+#permalink: /:categories/:year/:month/:day/:title/
 permalink: /:year/:month/:day/:title/
 paginate: 10
 
 exclude: ['README.md', 'Gemfile.lock', 'Gemfile', 'Rakefile']
 
-github_username: frankxjkuang
+github_username: luoyan35714
 highlighter: Pygments
 
 # Build settings
 markdown: kramdown
 
-baidu_analysis: e2e60863afcb2e6d5e0598e66a924eaf
-# baidu_analysis: 94be4b0f9fc5d94cc0d0415ea6761ae9
+baidu_analysis: 94be4b0f9fc5d94cc0d0415ea6761ae9
 
