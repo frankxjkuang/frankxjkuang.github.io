@@ -8,9 +8,10 @@ url: http://www.kxjun.top
 github: https://github.com/frankxjkuang/
 baseurl: ""
 description: This too shall pass!
-meta_description: 旷祥军;个人博客;学习;web;
-motto: 想要得到某样东西的最好方法,就是让自己配得上它。
-banner: Do what you want to do and start now.
+meta_description: Frank;旷祥军;个人博客;学习;web;
+motto: The safest way to try to get what you want is to try to deserve what you want
+
+banner: Do what you want to do and start now
 
 #permalink: /:categories/:year/:month/:day/:title/
 permalink: /:year/:month/:day/:title/
@@ -18,7 +19,7 @@ paginate: 10
 
 exclude: ['README.md', 'Gemfile.lock', 'Gemfile', 'Rakefile']
 
-github_username: luoyan35714
+github_username: frankxjkuang
 highlighter: Pygments
 
 # Build settings

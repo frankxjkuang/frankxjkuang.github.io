@@ -3615,6 +3615,7 @@ textarea.input-group-sm > .input-group-btn > .btn {
   padding: 20px 15px;
   font-size: 18px;
   line-height: 20px;
+  border-radius: 50%;
 }
 .navbar-brand:hover,
 .navbar-brand:focus {
@@ -6520,7 +6521,8 @@ hr {
 }
 .docs-nav .container .navbar-brand {
   margin: 12px 0 0;
-  width: 100px;
+  width: 40px;
+  height: 40px;
   padding: 0;
 }
 .docs-nav .container .navbar-brand img {
