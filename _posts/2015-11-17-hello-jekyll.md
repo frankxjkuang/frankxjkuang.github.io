@@ -16,7 +16,7 @@ First POST build by Jekyll.
 诫子书
 ------------------------
 
-![诫子书]({{ '/styles/images/jiezishu.jpg' | prepend: site.baseurl  }})
+<div class="banner-img">![诫子书]({{ '/styles/images/jiezishu.jpg' | prepend: site.baseurl  }})</div>
 
 
 [诸葛亮](#)
