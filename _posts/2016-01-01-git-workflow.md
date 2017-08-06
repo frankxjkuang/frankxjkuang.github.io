@@ -15,7 +15,7 @@ tag: 教程
 
 先上一张经典的git工作空间的流程图
 
-![git工作流程图](http://ac-hjXcMNw4.clouddn.com/4eb960c8dc714e033aec.png)
+<img src="http://ac-hjXcMNw4.clouddn.com/4eb960c8dc714e033aec.png" width = "100%" height = "100%" alt="git工作流程图" />
 
 git工作空间
 ------------------------------------
