@@ -19,4 +19,4 @@ tag: log
 
 最终选择了畅言，它需要备案，不过用起来感觉还不错，最重要的还有响应式布局哦。
 
-具体操作就不说了，很简单的，这里给个入口吧[畅言官网](http://changyan.kuaizhan.com/)
+具体操作就不说了，很简单的，这里给个入口吧<a href="http://changyan.kuaizhan.com/" target="_blank">畅言官网</a>
