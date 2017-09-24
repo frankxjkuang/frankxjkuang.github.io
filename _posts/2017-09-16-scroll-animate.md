@@ -3,7 +3,7 @@ layout: post
 title:  自定义动画的实现
 date:   2017-09-16 12:35:00 +0800
 categories: document
-tag: 教程
+tag: course
 ---
 
 * content

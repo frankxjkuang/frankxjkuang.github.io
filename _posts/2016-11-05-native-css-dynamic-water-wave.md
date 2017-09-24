@@ -3,7 +3,7 @@ layout: post
 title:  css实现动态波浪
 date:   2016-11-05 02:16:00 +0800
 categories: document
-tag: 教程
+tag: course
 ---
 
 * content
