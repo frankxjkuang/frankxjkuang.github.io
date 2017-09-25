@@ -65,7 +65,6 @@ module.exports = {
         test: /\.(scss|css)$/,
         use: ExtractTextPlugin.extract({
           fallback: 'style-loader',
-          publicPath: '../../../',
           use: [
             {
               loader: 'css-loader',
@@ -93,6 +92,7 @@ module.exports = {
               useRelativePath: false,
               name: '[name].[ext]?[hash:8]',
               outputPath: 'themes/mobile/assets/',
+              publicPath: '/',
             },
           },
         ],
