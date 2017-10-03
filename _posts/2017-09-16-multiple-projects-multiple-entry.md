@@ -10,7 +10,7 @@ tag: log
 {:toc}
 
 
->最近做了一个项目在这里写速记一下
+>最近做了一个项目在这里速记一下
 
 + 该项目是多个官网项目
 + 使用一个仓库，多人联合开发
@@ -65,7 +65,6 @@ module.exports = {
         test: /\.(scss|css)$/,
         use: ExtractTextPlugin.extract({
           fallback: 'style-loader',
-          publicPath: '../../../',
           use: [
             {
               loader: 'css-loader',
@@ -91,8 +90,9 @@ module.exports = {
             options: {
               limit: 10000,
               useRelativePath: false,
-              name: '[name].[ext]?[hash:8]',
+              name: '[name]-[hash:8].[ext]',
               outputPath: 'themes/mobile/assets/',
+              publicPath: '/',
             },
           },
         ],
@@ -117,45 +117,27 @@ const webpackConfig = {
   context: __dirname,
   entry: {
     index: ['./js/index.js'],
-    newsList: ['./js/newsList.js'],
-    newsDetail: ['./js/newsDetail.js'],
-    aboutUs: ['./js/aboutUs.js'],
     error404: ['./js/error404.js'],
   },
   output: {
-    path: path.resolve(__dirname, '../../../dist/RavvChina'),
+    path: path.resolve(__dirname, '../../../dist/xxx'),
     filename: 'themes/mobile/js/[name].js?[hash:8]',
   },
   devServer: {
-    contentBase: path.join(__dirname, '../../../dist/RavvChina'),
+    contentBase: path.join(__dirname, '../../../dist/xxx'),
     port: 7001,
   },
   plugins: [
     new CommonsChunkPlugin({
       name: 'common',
-      chunks: ['index', 'newsList', 'newsDetail', 'aboutUs', 'error404'],
+      chunks: ['index', 'error404'],
       // minChunks是指一个文件至少被require几次才会被放到CommonChunk里，如果minChunks等于2，说明一个文件至少被require两次才能放在CommonChunk里
-      minChunks: 5 // 提取所有chunks共同依赖的模块
+      minChunks: 2 // 提取所有chunks共同依赖的模块
     }),
     new HtmlWebpackPlugin({
       filename: 'error404.html',
       template: 'error404.html',
       chunks: ['common', 'error404'],
-    }),
-    new HtmlWebpackPlugin({
-      filename: 'newsList.html',
-      template: 'newsList.html',
-      chunks: ['common', 'newsList'],
-    }),
-    new HtmlWebpackPlugin({
-      filename: 'newsDetail.html',
-      template: 'newsDetail.html',
-      chunks: ['common', 'newsDetail'],
-    }),
-    new HtmlWebpackPlugin({
-      filename: 'aboutUs.html',
-      template: 'aboutUs.html',
-      chunks: ['common', 'aboutUs'],
     }),
     new HtmlWebpackPlugin({
       filename: 'index.html',

@@ -223,3 +223,16 @@ $ git branch |grep 'bugfix' |xargs git branch -d
 + xargs 的作用是将参数列表转换成小块分段传递给其他命令
 
 > 因此该命令的意思是：从分支列表中匹配到指定分支，然后一个一个(分成小块)传递给删除分支的命令，最后进行删除。
+
+解决冲突
+====================================
+
+```git
+$ git fetch origin <branchname>
+
+$ git checkout <localbranchname>
+
+$ git FETCH_HEAD
+
+# 根据提示解决冲突之后进行提交
+```
