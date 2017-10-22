@@ -10,7 +10,7 @@ tag: course
 {:toc}
 
 
-webpack作为第三方包的管理工具以及项目打包工具等，是前端必须掌握的必不可少的工具之一,下面速记一下如何快速入门webpack。
+webpack作为第三方包的管理工具以及项目打包工具等，是前端必须掌握的必不可少的工具之一,下面速记一下如何快速入门webpack。[gitHub上的demo地址](https://webpack.js.org/configuration/dev-server/)
 
 Webpack和Grunt以及Gulp相比
 ====================================
@@ -166,7 +166,7 @@ webpack构建本地服务器（devserver）
 npm install wabpack-dev-server --save-dev
 ```
 
-devserver配置项[更多]: https://webpack.js.org/configuration/dev-server/
+devserver配置项[更多](https://webpack.js.org/configuration/dev-server/)
 ------------------------------------
 
 | options      |      描述      |
@@ -370,7 +370,7 @@ module.exports = {
 ```
 
 ```css
-// 在 res 目录中新建一个 style.css 文件
+// 在res目录中新建一个style.css文件
 .redfont {
   font-color: red;
 }
@@ -580,3 +580,4 @@ module.exports = {
 为了避免缓存引起的问题，在打包文件时通常也会在文件名后加上`hash`值
 
 就说这么多吧，基本的使用应该没问题了。
+
