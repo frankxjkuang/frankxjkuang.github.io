@@ -7125,3 +7125,8 @@ td.visible-print {
     padding-top: 70px;
     margin-top: -70px;
 }
+
+/* 畅言评论的热门话题 */
+.module-hot-topic {
+  display: none!important;
+}

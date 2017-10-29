@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  速记一下快速入门webpack
-date:   2017-10-03 12:54:00 +0800
+date:   2017-10-19 12:54:00 +0800
 categories: document
 tag: course
 ---
