@@ -10,7 +10,7 @@ tag: course
 {:toc}
 
 
-webpack作为第三方包的管理工具以及项目打包工具等，是前端必须掌握的必不可少的工具之一,下面速记一下如何快速入门webpack。[gitHub上的demo地址](https://webpack.js.org/configuration/dev-server/)
+webpack作为第三方包的管理工具以及项目打包工具等，是前端必须掌握的必不可少的工具之一,下面速记一下如何快速入门webpack。[gitHub上的demo地址](https://github.com/frankxjkuang/shortHandwebpack)
 
 Webpack和Grunt以及Gulp相比
 ====================================
