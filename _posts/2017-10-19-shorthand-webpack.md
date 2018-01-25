@@ -157,6 +157,15 @@ module.exports = {
 }
 ```
 
+> tip: 有的时候项目的公共文件需要在很多地方引入，但是相对路径有很冗长，因此可以使用resolve来简化引入的路径，具体使用如下：
+```javascript
+resolve: {
+    alias: {
+        commonjs: path.resolve(__dirname, 'src/common/js/commonjs/'),
+    },
+},
+```
+
 webpack构建本地服务器（devserver）
 ------------------------------------
 
@@ -564,6 +573,17 @@ module.exports = {
         new webpack.HotModuleReplacementPlugin()  // 热加载插件
     ],
 };
+```
+
+CopyWebpackPlugin
+------------------------------------
+有的时候我们的项目中会使用一些文件，由于各种原因使得我们需要让他存在于在打包后文件的指定路径下，这个时候就需要 `CopyWebpackPlugin` 的，使用方式如下（简单记一下，使用时请查阅文档）：
+
+```javascript
+new CopyWebpackPlugin([
+    { from: './src', to: './libs' },
+    ...
+]),
 ```
 
 补充
