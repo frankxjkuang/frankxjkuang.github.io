@@ -96,6 +96,7 @@ npm install sass-loader node-sass --save-dev
 <style lang="scss"></style>
 ```
 
+
 模板语法
 ====================================
 
@@ -122,6 +123,7 @@ npm install sass-loader node-sass --save-dev
 ```
 
 > **PS:** 在 `Mustache` 中我们还可以写 `Javascript` 表达式(但是这个有限制，每个绑定都只能包含单个表达式):
+
 ```javascript
 {{ number += 1 }}
 
@@ -129,6 +131,7 @@ npm install sass-loader node-sass --save-dev
 
 {{ msg.split('').reverse().join('') }}
 ```
+
 
 指令
 ====================================
