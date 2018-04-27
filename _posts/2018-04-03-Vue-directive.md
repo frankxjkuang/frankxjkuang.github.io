@@ -76,13 +76,16 @@ export default {
   This could be e.g. documentation for the component.
 </custom1>
 ```
+
 vue-loader 会解析文件，提取每个语言块，如有必要会通过其它 loader 处理，最后将他们组装成一个 CommonJS 模块，module.exports 出一个 Vue.js 组件对象。
 
-> **PS:**这里补充一下在 `.vue` 文件中使用 `sass`
+> **PS:**这里补充一下在 `.vue` 文件中使用 `sass`：
+
 1. 安装 `sass` 依赖包
 ```npm
 npm install sass-loader node-sass --save-dev
 ```
+
 2. 在 build 文件夹下的 `webpack.base.conf.js` 文件中添加 `rules` 配置：
 ```javascript
 {
@@ -90,6 +93,7 @@ npm install sass-loader node-sass --save-dev
     loader: ['style', 'css', 'sass']
 }
 ```
+
 3. 使用 
 在 `style` 标签上增如下属性：
 ```html
@@ -111,8 +115,7 @@ npm install sass-loader node-sass --save-dev
 <p v-once>{{ msg }}</p>
 ```
 
-将一段 html 字符串解析为html代码，需要使用 `v-html` 
-：
+将一段 html 字符串解析为html代码，需要使用 `v-html` ：
 ```html
 <span v-html="htmlStr"></span>
 ```
