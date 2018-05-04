@@ -2,8 +2,8 @@
 layout: post
 title:  Vue学习笔记（指令）
 date:   2018-04-03 11:11:00 +0800
-categories: document
-tag: Vue
+categories: Vue
+tag: note
 ---
 
 * content

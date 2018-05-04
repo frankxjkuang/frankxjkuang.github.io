@@ -2,8 +2,8 @@
 layout: post
 title:  Vue学习笔记（组件）
 date:   2018-04-10 5:00:00 +0800
-categories: document
-tag: Vue
+categories: Vue
+tag: note
 ---
 
 * content
