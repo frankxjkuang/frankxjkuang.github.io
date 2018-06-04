@@ -2,7 +2,7 @@
 layout: post
 title:  git 工作流
 date:   2016-08-27 01:08:00 +0800
-categories: document
+categories: git
 tag: course
 ---
 
