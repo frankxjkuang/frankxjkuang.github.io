@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  javascript中的this
+title:  明明白白-JavaScript中的闭包
 date:   2018-06-26 10:29:00 +0800
 categories: javascript
 tag: note
