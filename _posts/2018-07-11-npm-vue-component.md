@@ -9,6 +9,7 @@ tag: note
 * content
 {:toc}
 
+[源码地址](https://github.com/frankxjkuang/custom-ui)，如果对你有帮助的话希望不要吝啬你的 Star
 
 本文主要记录一下如何基于 `Vue` 开发组件，并在 [npm](https://www.npmjs.com/) 上发布。废话不多说，进入正题
 
@@ -19,13 +20,15 @@ tag: note
 我们开发的之后期望的结果是支持 import、require 或者直接使用 script 标签的形式引入，就像这样：
 
 ```js
-import MoorUI from 'moor-ui';
+// 这里注意一下包的名字前缀是 custom ，组件的名字前缀是 moor
+// 这是因为那个名字发布包的时候被占用了（我做实验的时候叫 moor-ui）现在改成了custom-ui，但是组件的前缀懒得改
+import CustomUI from 'custom-ui';
 
-// 或者 const MoorUI = require('moor-ui');
+// 或者 const CustomUI = require('custom-ui');
 
 // 或者 <script src="..."></script>
 
-Vue.use(MoorUI);
+Vue.use(CustomUI);
 ```
 
 # 构建一个 Vue 项目
@@ -147,6 +150,34 @@ export default {
 }
 ```
 
+本地运行通过 `<script/>` 标签的方式使用，修改 `index.html` 文件：
+```html
+<!-- 省略部分代码 -->
+<div id="app">
+  <moor-hello-world :color="color" :msg="msg"></moor-hello-world>
+  <moor-switch
+  v-model="lightSwitch">开关:</moor-switch>
+</div>
+<script src="./node_modules/vue/dist/vue.js"></script>
+<script src="/dist/custom-ui.js"></script>
+<script>
+new Vue({
+  el: '#app',
+  data() {
+    return {
+      color: 'red',
+      msg: 'hello world!',
+      lightSwitch: false
+    }
+  }
+})
+</script>
+```
+
+然后运行 `npm run dev` 你就可以看到效果了:
+
+![preview.png](https://upload-images.jianshu.io/upload_images/2669310-de6fe94ad7885cde.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
 好了到这里我们的组件就开发完成了；下面开始说怎么打包发布到 npm 上
 
 # 发布到 npm 
@@ -155,17 +186,18 @@ export default {
 
 ```js
 // ... 此处省略代码 
-module.exports = {
-  // 修改打包入口
-  // entry: './src/main.js', // develop entry
-  entry: './src/index.js',   // build entry
+// 执行环境
+const NODE_ENV = process.env.NODE_ENV
 
+module.exports = {
+  // 根据不同的执行环境配置不同的入口
+  entry: NODE_ENV == 'development' ? './src/main.js' : './src/index.js',
   output: {
     // 修改打包出口，在最外级目录打包出一个 index.js 文件，我们 import 默认会指向这个文件
     path: path.resolve(__dirname, './dist'),
     publicPath: '/dist/',
-    filename: 'moor-ui.js',
-    library: 'moor-ui', // 指定的就是你使用require时的模块名
+    filename: 'custom-ui.js',
+    library: 'custom-ui', // 指定的就是你使用require时的模块名
     libraryTarget: 'umd', // libraryTarget会生成不同umd的代码,可以只是commonjs标准的，也可以是指amd标准的，也可以只是通过script标签引入的
     umdNamedDefine: true // 会对 UMD 的构建过程中的 AMD 模块进行命名。否则就使用匿名的 define
   },
@@ -178,8 +210,8 @@ module.exports = {
 // 发布开源因此需要将这个字段改为 false
 "private": false,
 
-// 这个指 import moor-ui 的时候它会去检索的路径
-"main": "dist/moor-ui.js",
+// 这个指 import custom-ui 的时候它会去检索的路径
+"main": "dist/custom-ui.js",
 ```
 
 发布命令其实就是两句话
@@ -191,9 +223,94 @@ npm publish // 发布
 
 完成之后我们就可以在项目中安装使用了
 ```js
-npm install moor-ui -S 
+npm install custom-ui -S 
 ```
+
+在 `main.js` 中引入插件
+```js
+import CustomUI from 'custom-ui'
+Vue.use(CustomUI)
+```
+
+在组件中使用：
+```html
+<!-- 直接使用脚手架的HelloWorld组件 -->
+<!-- 此处有省略代码，看对地方加入代码哦 -->
+<div class="moor-item">
+  <label>Input: </label>
+  <moor-input
+  v-model="input1"
+  placeholder="请输入信息">
+  </moor-input>
+
+  <moor-input
+    v-model="input2"
+    placeholder="请输入信息">
+  </moor-input>
+
+  <moor-input
+    placeholder="输入框禁用"
+    :disabled="inputDisabled">
+  </moor-input>
+</div>
+
+<div class="moor-item">
+  <label>Switch: </label>
+
+  <moor-switch
+  v-model="lightSwitch">开关(开):</moor-switch>
+
+  <moor-switch
+  v-model="switchLight">开关(关):</moor-switch>
+</div>
+
+<script>
+export default {
+  name: 'HelloWorld',
+  data () {
+    return {
+      // HelloWorld
+      msg: 'Welcome to moor UI!',
+      color: 'red',
+      // input
+      input1: '',
+      input2: '这是默认值',
+      inputDisabled: true,
+      // switch
+      lightSwitch: false,
+      switchLight: true
+    }
+  },
+  watch: {
+    lightSwitch: newValue => console.log('开关：', newValue),
+  }
+}
+</script>
+
+<style scoped>
+.moor-select, .moor-btn, .moor-switch, .moor-input {
+  margin: 10px 6px;
+}
+.moor-item {
+  display: flex;
+  align-items: center;
+}
+.moor-item label {
+  width: 100px;
+  display: inline-block;
+}
+</style>
+```
+
+预览效果如下:
+
+![test-preview.png](https://upload-images.jianshu.io/upload_images/2669310-6eeb20be5bf621cf.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 **PS:** 修改 .gitignore 去掉忽略dist,因为我们打包的文件也需要提交；每次上到npm上需要更改版本号，package.json 里的 version 字段
 
-源码...！额，我删了，有需要的话再写吧，主要还是提供思路。用习惯了开源的组件自己总得了解一下嘛，有的时候在开发的过程中我们找不到合适的开源组件就需要自己开发了，这个时候我们把自己写的一些精致的小插件开源出来挺好的...
+
+写的比较简单，主要还是提供思路。用习惯了开源的组件自己总得了解一下嘛，有的时候在开发的过程中我们找不到合适的开源组件就需要自己开发了，这个时候我们把自己写的一些精致的小插件开源出来挺好的...
+
+最后希望你给个 Star [源码地址](https://github.com/frankxjkuang/custom-ui)
+
+哦，对了README，不想写了...哈哈
