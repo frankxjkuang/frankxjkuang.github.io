@@ -34,3 +34,5 @@ permalink: /books/
 + 《三体X》
 + 《知行合一王阳明》
 + 《东方快车谋杀案》
++ 《JavaScript权威指南》
++ 《深入浅出Node.js》
