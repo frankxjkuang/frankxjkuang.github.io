@@ -36,3 +36,4 @@ permalink: /books/
 + 《东方快车谋杀案》
 + 《JavaScript权威指南》
 + 《深入浅出Node.js》
++ 《了不起的NodeJS》
