@@ -37,7 +37,7 @@ permalink: /books/
 + 《JavaScript权威指南》
 + 《深入浅出Node.js》
 + 《了不起的NodeJS》
-+ 《声明的路》
++ 《生命的路》
 + 《盛夏的方程式》
 + 《怪诞心理学》
 + 《JavaScript设计模式与开发实践》

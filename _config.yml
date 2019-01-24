@@ -24,6 +24,6 @@ highlighter: Pygments
 
 # Build settings
 markdown: kramdown
-
+# 直接写在百度统计里，这个配置可以不用了
 baidu_analysis: e2e60863afcb2e6d5e0598e66a924eaf
 
