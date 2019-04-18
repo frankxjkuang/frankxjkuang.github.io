@@ -15,7 +15,7 @@ tag: course
 
 先上一张经典的git工作空间的流程图
 
-<img src="http://ac-hjXcMNw4.clouddn.com/4eb960c8dc714e033aec.png" width = "100%" height = "100%" alt="git工作流程图" />
+<img src="www.runoob.com/wp-content/uploads/2015/02/git-process.png" width = "100%" height = "100%" alt="git工作流程图" />
 
 git工作空间
 ------------------------------------

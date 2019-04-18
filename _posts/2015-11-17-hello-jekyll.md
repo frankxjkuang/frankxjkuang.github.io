@@ -16,7 +16,7 @@ First POST build by Jekyll.
 诫子书
 ------------------------
 
-<img src="/styles/images/jiezishu.jpg" width = "100%" height = "100%" alt="诫子书" />
+<img src="../styles/images/jiezishu.jpg" width ="100%" height ="100%" alt="诫子书" />
 
 [诸葛亮](#)
 
