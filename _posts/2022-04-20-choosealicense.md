@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  go protobuf 简单的例子
-date:   2022-04-15 10:30:00 +0800
+date:   2022-04-20 10:30:00 +0800
 categories: document
 tag: log
 ---
