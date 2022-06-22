@@ -56,3 +56,4 @@ permalink: /books/
 + 《web编程实战》
 + 《Golang修养之路》
 + 《项目管理知识体系指南PMBOK》
++ 《富爸爸，穷爸爸》
