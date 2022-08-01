@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  go protobuf 简单的例子
+title:  License 协议简介
 date:   2022-04-20 10:30:00 +0800
 categories: document
 tag: log
