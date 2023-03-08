@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  切换域名
-date:   2022-11-04 10:30:00 +0800
+date:   2023-03-08 10:30:00 +0800
 categories: essay
 tag: log
 ---
@@ -26,6 +26,9 @@ tag: log
 2. 支持https
 3. 免费高速的DNS
 4. 免费、免费、免费一切都免费，代码托管在github，github page自定义域名到kuangxj.eu.org，自定义域名托管在cloudflare
+
+## 缺点
+网站总访问量直接归零😂
 
 > 再也不用担心域名到期了，完美
 > 顺便把之前的评论系统下了，一来是没什么人评论，二来是评论系统有广告，恶心人
