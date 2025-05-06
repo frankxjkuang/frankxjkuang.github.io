@@ -2,19 +2,19 @@
 name: Frank's Blog
 email: frankxjkuang@gmail.com
 author: Frank·J
-url: http://www.kxjun.top
+url: https://www.kuangxj.eu.org/
 # 个人简历
 # resume_site: http://www.hifreud.com/Resume.io/
 github: https://github.com/frankxjkuang/
 baseurl: ""
 description: This too shall pass!
-meta_description: Frank;旷祥军;个人博客;学习;web;
+meta_description: Frank;个人博客;学习;web;
 motto: The safest way to try to get what you want is to try to deserve what you want
 
 banner: Do what you want to do and start now
 
 #permalink: /:categories/:year/:month/:day/:title/
-permalink: /:year/:month/:day/:title/
+permalink: /:title/
 paginate: 10
 
 exclude: ['README.md', 'Gemfile.lock', 'Gemfile', 'Rakefile']
